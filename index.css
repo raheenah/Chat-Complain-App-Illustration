@@ -1,0 +1,275 @@
+:root {
+  --light_purple: hsl(293, 100%, 63%);
+  --dark_purple: hsl(264, 100%, 61%);
+  --white: #ffffff;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: aliceblue;
+}
+.screen {
+  position: relative; /* This ensures that children are positioned relative to this container */
+  width: 100%; /* Adjust as needed */
+  height: 100%;
+  left: -5%;
+  top: -1%;
+}
+.rectangle {
+  /* background-color: hsl(293, 100%, 63%); */
+  background-image: linear-gradient(
+    to bottom,
+    var(--light_purple),
+    /* Using custom color */ var(--dark_purple) /* Using custom color */
+  );
+  width: 25%;
+
+  height: 85%;
+  border-bottom-left-radius: 150px;
+  border-bottom-right-radius: 150px;
+  /* border-radius: 5px / 250px; */
+  position: absolute;
+  overflow: hidden;
+  z-index: 1;
+}
+.phone_container {
+  background-color: var(--white);
+  width: 17%;
+  height: 69%;
+  position: absolute;
+  left: 22%;
+  top: 20%;
+  z-index: 2;
+  border-radius: 30px;
+}
+
+.dynamic_island {
+  /* background-image: linear-gradient(to right, --dark_purple, --light_purple); */
+  width: 50%;
+  height: 5%;
+  position: absolute;
+  left: 25%;
+  background-color: var(--white);
+  z-index: 5;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.phone_outline {
+  background-color: rgb(247, 247, 247);
+  width: 94%;
+  height: 97%;
+  border-radius: 25px;
+  left: 3%;
+  top: 1.5%;
+  position: relative;
+  z-index: 3;
+  right: 3%;
+}
+.top {
+  background-image: linear-gradient(
+    to right,
+    var(--dark_purple),
+    var(--light_purple)
+  );
+  width: 100%;
+  height: 14%;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  position: absolute;
+  z-index: 4;
+}
+.top_contents {
+  display: flex;
+}
+.avatar {
+  width: 12%;
+  height: 40%;
+  border: 1.5px solid var(--white);
+  border-radius: 50%;
+  position: absolute;
+  left: 14%;
+  top: 40%;
+  z-index: 5;
+}
+.profile_overview {
+  position: absolute;
+  display: block;
+  left: 30%;
+  top: 18%;
+}
+#name {
+  font-size: 0.759rem;
+  color: hsl(270, 20%, 96%);
+  font-weight: bolder;
+  margin-bottom: 0rem;
+}
+#status {
+  font-size: 0.5rem;
+  color: hsl(276, 100%, 81%);
+  margin-top: 0rem;
+}
+.back {
+  width: 5%;
+  height: 25%;
+  position: absolute;
+  left: 6.5%;
+  top: 49%;
+}
+.menu {
+  width: 10%;
+  height: 40%;
+  position: absolute;
+  left: 85%;
+  top: 42%;
+}
+.chat {
+  position: absolute;
+  top: 15%;
+  left: 3%;
+  right: 3%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.dogs {
+  width: 50%;
+  /* margin-bottom: 0.2rem; */
+  z-index: 10;
+  display: flex;
+  justify-content: space-around;
+  align-self: flex-end;
+  position: relative;
+}
+.dogs img {
+  width: 30%;
+  border-radius: 0.4rem;
+}
+.chat_bubble,
+.chat_bubble_right {
+  position: relative;
+  max-width: 57%;
+  max-height: 18%;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  text-wrap: wrap;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  /* padding-top: 1px;
+padding-bottom: 1px; */
+  /* margin-bottom: 0.5rem; */
+}
+.chat_bubble {
+  background-color: hsl(277, 34%, 87%);
+}
+.chat_bubble_right {
+  background-color: var(--white);
+  align-self: flex-end;
+}
+.chat_bubble,
+.chat_bubble_right p {
+  color: hsl(271, 58%, 71%);
+  font-size: 0.5rem;
+  /* margin: 5px;
+  margin-top: 5px; */
+}
+
+.chat_bubble_right p {
+  color: hsl(270, 16%, 24%);
+}
+.time {
+  display: flex;
+  background-image: linear-gradient(
+    to right,
+    var(--light_purple),
+    var(--dark_purple)
+  );
+  max-width: 76%;
+  flex-direction: row;
+  height: 1.3rem;
+  position: relative;
+  border-radius: 0.5rem;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.duration {
+  color: rgb(207, 163, 207);
+  font-size: 0.5rem;
+  align-self: center;
+}
+.time input[type="radio"] {
+  appearance: none; /* Remove default radio button appearance */
+  width: 0.7rem;
+  height: 0.7rem;
+  border: 0.085rem solid rgb(207, 163, 207); /* Custom border color */
+  border-radius: 50%;
+  background-color: transparent;
+  position: relative;
+  align-self: center;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+.time input[type="radio"] {
+  display: flex;
+  align-items: center;
+}
+.price {
+  color: hsl(270, 38%, 94%);
+  font-size: 0.85rem;
+  align-self: center;
+  font-weight: bolder;
+  align-self: center;
+  position: relative;
+  /* left: 1.7rem; */
+  /* align-self: flex-end; */
+  margin-left: auto;
+  margin-right: 1rem;
+}
+.message {
+  width: 90%;
+  height: 100%;
+  /* border-radius: 1rem; */
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  border: none;
+  position: relative;
+  font-size: 0.5rem;
+  /* line-height: 1.5rem; */
+  background-color: white;
+}
+.message::placeholder {
+  color: gray;
+  font-size: 0.5rem;
+  padding-left: 0.3rem;
+  align-items: center;
+}
+.input {
+  display: flex;
+  flex-direction: row;
+  gap: none;
+  width: 94%;
+  align-self: center;
+  margin-top: 0.35rem;
+  height: 1.5rem;
+}
+.container {
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  height: 108%;
+  width: 10%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+
+.container img {
+  position: relative;
+  align-self: center;
+  width: 1rem;
+  right: 0.3rem;
+}
