@@ -14,7 +14,9 @@ body {
   width: 100%; /* Adjust as needed */
   height: 100%;
   left: -5%;
-  top: -1%;
+  top: -1.4%;
+  display: flex;
+  flex-direction: row;
 }
 .rectangle {
   /* background-color: hsl(293, 100%, 63%); */
@@ -23,23 +25,23 @@ body {
     var(--light_purple),
     /* Using custom color */ var(--dark_purple) /* Using custom color */
   );
-  width: 25%;
-
+  width: 40%;
   height: 85%;
-  border-bottom-left-radius: 150px;
-  border-bottom-right-radius: 150px;
+  border-bottom-left-radius: 50rem;
+  border-bottom-right-radius: 50rem;
   /* border-radius: 5px / 250px; */
   position: absolute;
   overflow: hidden;
   z-index: 1;
+  left: -10%;
 }
 .phone_container {
   background-color: var(--white);
   width: 17%;
-  height: 69%;
+  height: 73%;
   position: absolute;
-  left: 22%;
-  top: 20%;
+  left: 25.9%;
+  top: 10%;
   z-index: 2;
   border-radius: 30px;
 }
@@ -152,7 +154,8 @@ body {
 .chat_bubble_right {
   position: relative;
   max-width: 57%;
-  max-height: 18%;
+  /* max-height: 1%; */
+  height: 10%;
   box-sizing: border-box;
   border-radius: 0.5rem;
   text-wrap: wrap;
@@ -254,7 +257,9 @@ padding-bottom: 1px; */
   gap: none;
   width: 94%;
   align-self: center;
-  margin-top: 0.35rem;
+  position: relative;
+  top: -0.1rem;
+  /* margin-top: 0.35rem; */
   height: 1.5rem;
 }
 .container {
@@ -272,4 +277,55 @@ padding-bottom: 1px; */
   align-self: center;
   width: 1rem;
   right: 0.3rem;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 36.33%;
+  height: 30%;
+  border: none;
+  background-color: transparent;
+  left: 46.4%;
+  top: 33%;
+  z-index: 20;
+  /*padding-left: 0.3rem;
+  padding-right: 0.3rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;*/
+}
+.text p,
+h1 {
+  margin: 4%;
+  font-family: Arial, Helvetica, sans-serif;
+  /* padding: 0; */
+  /* font-size: 0.7rem; */
+  padding: none;
+  margin: none;
+}
+.text h1 {
+  font-weight: bolder;
+  font-size: 2.6rem;
+  color: hsl(271, 82%, 24%);
+}
+.text p {
+  font-size: 1rem;
+  color: hsl(266, 4%, 68%);
+  position: relative;
+  top: -1.3rem;
+}
+.rectangle-right {
+  background-color: hsl(296, 41%, 93%);
+  width: 40%;
+
+  height: 85%;
+  border-top-left-radius: 50rem;
+  border-top-right-radius: 50rem;
+  /* border-radius: 5px / 250px; */
+  position: absolute;
+  left: 75%;
+  top: 20%;
+  overflow: hidden;
+  z-index: 19;
+  align-self: flex-end;
 }
